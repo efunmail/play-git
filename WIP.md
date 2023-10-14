@@ -49,3 +49,8 @@ git remote    set-url --add --push all git@github.com:efunmail/play-git.git
 git push all main
 ```
 
+
+## ALT method ??
+
+- [ ] ?? Duplicating a repository
+https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository
