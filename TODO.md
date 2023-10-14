@@ -1,8 +1,8 @@
 ## TODO
 
-- [ ] SSH keys
+- [x] SSH keys
 
-- [ ] Workflow
+- [.] Workflow
 
 ---
 
@@ -62,10 +62,6 @@ The key's randomart image is:
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMrCVIXQDhsjVvz5v6+PfqaljOEBTP5we8IOegeA1wS1 efunmail@_MAIL_
 ```
 
-- TODO: Commit Signature Verification
-
-    - [GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
-
 ----
 
 https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278
@@ -79,7 +75,7 @@ https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278
 
 ----
 
-## ssh-AGENT and ssh-ADD
+## ssh-AGENT and ssh-ADD  // OPTIONAL ??
 
 On *Debian*: https://wiki.debian.org/SSH#ssh-agent_and_ssh-add
 
@@ -105,6 +101,28 @@ ssh -T git@github.com
 ssh-add -d ~/.ssh/id_ed25519
 ```
 
+
+## Commit Signature VERIFICATION
+
+[Commit Signature Verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+
+- [Telling Git about your *SSH* key](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key)
+
+```sh
+git config gpg.format ssh
+git config user.signingkey /~/.ssh/id_ed25519.pub
+
+
+git config -l  # // Can list...
+```
+
+- [Signing Commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
+
+```sh
+git commit -S -m "Message..."
+#          ==
+```
+
 ## Workflow
 
 
@@ -114,7 +132,7 @@ ssh-add -d ~/.ssh/id_ed25519
 # // Modify (and/or: add, delete) source files...
 
 git add .
-git commit -am "Message..."
+git commit -S -am "Message..."
 
 
 ssh -T git@github.com  # ?? necessary
