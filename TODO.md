@@ -79,6 +79,32 @@ https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278
 
 ----
 
+## ssh-AGENT and ssh-ADD
+
+On *Debian*: https://wiki.debian.org/SSH#ssh-agent_and_ssh-add
+
+- List...
+
+```sh
+ssh-add -l
+
+The agent has no identities.
+```
+
+- Add *PRIVATE* key:
+
+```sh
+ssh-add ~/.ssh/id_ed25519
+
+ssh -T git@github.com
+```
+
+- Can *remove* it:
+
+```sh
+ssh-add -d ~/.ssh/id_ed25519
+```
+
 ## Workflow
 
 
