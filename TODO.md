@@ -62,6 +62,40 @@ The key's randomart image is:
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMrCVIXQDhsjVvz5v6+PfqaljOEBTP5we8IOegeA1wS1 efunmail@_MAIL_
 ```
 
-### Commit Signature Verification
+- TODO: Commit Signature Verification
 
-- [GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+    - [GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+
+----
+
+https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278
+
+> TEST: ssh -T git@github.com
+>
+> Change directory into the local clone of your repository, and run:
+>
+> `git remote set-url origin git@github.com:username/your-repository.git`
+
+
+----
+
+## Workflow
+
+
+```sh
+# // `git clone` ... OR `git push` ??
+
+# // Modify (and/or: add, delete) source files...
+
+git add .
+git commit -am "Message..."
+
+
+ssh -T git@github.com  # ?? necessary
+#   =================
+
+git remote set-url origin git@github.com:efunmail/play-git.git
+#          ==============================
+
+git push
+```
