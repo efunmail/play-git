@@ -26,7 +26,7 @@ hint: 	git branch -m <name>
 
 ```sh
 rm -rf .git/
-```sh
+```
 
 - Init - with (initial) *branch name* of **'main'**:
 
