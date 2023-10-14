@@ -48,7 +48,11 @@ error: failed to push some refs to 'github.com:efunmail/play-git-2.git'
 
 
 > remote: fatal: **did not receive expected object** `5be5917d9f6a0487a530d178b9c892aba660aeac`
+
 > error: **remote unpack failed**: *index-pack failed*
+
 > To github.com:efunmail/play-git-2.git
+
 >  ! [remote rejected] main -> main (failed)
+
 > error: **failed to push some refs** to 'github.com:efunmail/play-git-2.git'
