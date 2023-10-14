@@ -1,13 +1,10 @@
 ## WIP
 
-- REMOVE exising 'origin'
+- Init, and PULL from *existing* repo 
 
 ```sh
-# git remote -v |less  # // Can check
-
-git remote remove origin
-
-# git remote -v |less  # // Can check
+git init -b main
+git pull https://github.com/efunmail/play-git.git
 ```
 
 - ADD 'MIRROR' repo
